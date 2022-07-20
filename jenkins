@@ -47,7 +47,7 @@ pipeline {
                 withSonarQubeEnv(installationName:'Sonar') {
                   
                         
-                        sh ' mvn  sonar:sonar -Dsonar.projectKey=spring '
+                        sh ' mvn -f ecomsitespring sonar:sonar -Dsonar.projectKey=spring '
                     
                 }
             }
