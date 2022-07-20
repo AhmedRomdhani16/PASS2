@@ -14,7 +14,7 @@ pipeline {
     stages { 
      stage('SCM') {
             steps {
-                git  branch: 'main', url: 'https://github.com/AhmedRomdhani16/starwars1'
+                git  branch: 'main', url: 'https://github.com/AhmedRomdhani16/PASS2'
             }
         }
         
