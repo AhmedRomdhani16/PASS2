@@ -49,16 +49,16 @@ spec:
           - containerPort: 27017
             name: ecom-mongo-cont
         volumeMounts:
-          - name: task-pv-volume
+          - name: ecom-mongo-pv
             mountPath: /data/db
-          - name: task-pv-volumet
+          - name: ecom-mongo-pv
             mountPath: /docker-entrypoint-initdb.d/init-mongo.js
       volumes:
         - name: ecom-mongo-persistent-storage # Obtaining 'vloume' from PVC
           hostPath:
             path: /tmp/db
             type: Directory
-        - name: task-pv-volume
+        - name: ecom-mongo-pv
           hostPath:
             path: /mongo-init.js
 
